@@ -9,6 +9,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+
+  enteredInitialInvestment = '0';
+  enteredAnnualInvestment = '0';
+  enteredExpectedReturn = '0';
+  enteredDuration = '0';
+
   onSubmit() {
     alert('Form submitted!');
   }
