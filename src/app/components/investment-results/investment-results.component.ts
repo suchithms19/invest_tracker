@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Input } from '@angular/core';
-import { YearlyData } from '../../app.types';
 import { CommonModule } from '@angular/common';
+import { InvestmentService } from '../../investment.service';
 
 @Component({
   selector: 'app-investment-results',
@@ -11,5 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
-  @Input() results?: YearlyData[];
+  constructor(private investmentService:InvestmentService) {}
+
+  get results(){
+    return this.investmentService.annualData;
+  }
 }
