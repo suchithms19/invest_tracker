@@ -1,5 +1,6 @@
 <div>
     <app-header/>
     <app-user (investmentDetails)="calculateInvestmentResults($event)"/>
+    <app-investment-results [results]="annualData"/>
 </div>
 
