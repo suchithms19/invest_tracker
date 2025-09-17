@@ -31,7 +31,7 @@ export class AppComponent {
         totalAmountInvested: initialInvestment + annualInvestment * year,
       });
     }
-
+    console.log(annualData);
     return annualData;
   }
 }
